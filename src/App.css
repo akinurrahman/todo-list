@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+:root {
+  --container-bg-color: #f6f4f2;
+  --main-bg-color: #f0e2cc;
+  --title-bg: #ffd700; /* Yelloish title background color */
+  --text-color: #333333;
+  --input-border-color: #ffa500; /* Yelloish input border color */
+  --button-bg-color: #ffa500; /* Yelloish button background color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: var(--main-bg-color);
   min-height: 100vh;
+  margin: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  font-size: 130%;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(
+    135deg,
+    #fff,
+    var(--container-bg-color)
+  ); /* Updated gradient background */
+  border-radius: 25px; /* Increased border radius for a smoother look */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  padding: 2rem; /* Increased padding for better spacing */
+  box-sizing: border-box;
+}
+
+.heading {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.heading h1 {
+  padding: 0.5rem 1rem;
+  border-radius: 10% 5% 10% 5%/5% 10% 15% 10%;
+  background-color: var(--title-bg);
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form input {
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 0.7rem;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 3px;
+  border: 2px solid var(--input-border-color);
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: var(--text-color);
+  width: 70%;
+  outline: none;
+  margin-right: 12px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-family: "Architects Daughter", cursive;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--button-bg-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+li {
+  text-align: left;
+  position: relative;
+  padding: 0.5rem;
+  background-color: var(--container-bg-color);
+  margin-bottom: 5px;
+}
+
+.content.clicked li {
+  text-decoration: line-through;
+  color: red;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.trash {
+  padding: 15px 10px 0 20px;
 }
