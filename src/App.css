@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Roboto&family=Ubuntu&display=swap");
 :root {
   --container-bg-color: #f6f4f2;
   --main-bg-color: #f0e2cc;
@@ -6,7 +7,9 @@
   --input-border-color: #ffa500; /* Yelloish input border color */
   --button-bg-color: #ffa500; /* Yelloish button background color */
 }
-
+* {
+  font-family: "Architects Daughter", "cursive", 'Ubuntu', sans-serif;
+}
 body {
   background-color: var(--main-bg-color);
   min-height: 100vh;
@@ -15,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--text-color);
-  font-family: "Architects Daughter", cursive;
+
   text-align: center;
   font-size: 130%;
 }
@@ -55,7 +58,7 @@ body {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 3px;
   border: 2px solid var(--input-border-color);
-  font-family: "Architects Daughter", cursive;
+
   font-size: 1rem;
   color: var(--text-color);
   width: 70%;
@@ -66,7 +69,7 @@ body {
 button {
   padding: 0;
   border: none;
-  font-family: "Architects Daughter", cursive;
+
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
